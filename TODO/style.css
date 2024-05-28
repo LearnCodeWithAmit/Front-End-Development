@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgb(25, 47, 49);
+    font-family: "Poppins", sans-serif;
+}
+.container
+{
+    height: 80vh;
+    width: 70%;
+    border-radius: 25px;
+    background: linear-gradient(135deg,#ffffff77,#fff9);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    box-shadow: 0 0 20px #3332;
+}
+h1{
+    text-align: center;
+    color: #fff;
+    font-size: 3rem;
+}
+.wrapper
+{
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    max-width: 700px;
+}
+.input
+{
+    width: 50%;
+    padding: 15px 20px;
+    border: 1px solid #fff0;
+    outline: none;
+    background: #fff8;
+    caret-color: red;
+    border-radius: 22px;
+}
+.input::placeholder
+{
+    padding-left: 10px;
+}
+.input:hover
+{
+    border: 1px solid #fff;
+}
+.btn
+{
+    width: 20%;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #4562;
+    outline: none;
+    background: linear-gradient(120deg,#44669522,#01a88199);
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+}
+.btn:hover
+{
+    background: #01a88199;
+}
+
+.todo-area
+{
+    max-width: 700px;
+    max-height: 70%;
+    margin: auto;
+    margin-top: 50px;
+    background: #fff3;
+    border-radius: 20px;
+    padding:0 20px;
+    padding: 20px;
+    overflow-y: scroll;
+}
+:root{
+    --scrollbar-width:0px
+}
+.todo-area::-webkit-scrollbar
+{
+    width: var(--scrollbar-width);
+}
+.todo-area::-webkit-scrollbar-track
+{
+    margin: 20px;
+}
+.todo-area::-webkit-scrollbar-thumb
+{
+    background: white;
+    border-radius: 20px;
+}
+
+.todo-area li
+{
+    list-style: none;
+    width: 90%;
+    background: #fff8;
+    padding: 15px 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #0001;
+    position: relative;
+    margin: 10px auto;
+    text-transform: capitalize;
+    cursor: default;
+}
+.todo-area li span
+{
+    position: absolute;
+    width: 20px;
+    aspect-ratio: 1;
+    background: #ff000063;
+    border-radius: 50%;
+    right: 10px;
+    cursor: pointer;
+}
+.todo-area li span:hover
+{
+    background: #f008;
+}
+
+.js-checked
+{
+    text-decoration: line-through;
+    color: rgba(0, 0, 0, 0.76);
+}
+
+.circle
+{
+    width: 250px;
+    aspect-ratio: 1;
+    background: linear-gradient(135deg,rgb(185,11,185),#fff9);
+    position: absolute;
+    z-index: -1;
+    border-radius: 50%;
+}
+.bg1
+{
+    top: 15%;
+    left: 2%;
+}
+.bg2
+{
+    bottom: 25%;
+    right: 2%;
+    background: linear-gradient(135deg,#fff9,rgb(11,165,185));
+}
