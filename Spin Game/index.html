@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spin Wheel Game | Learn Code With Amit</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="spinBtn">Spin</div>
+        <div class="wheel">
+            <span style="--i:0;"></span>
+            <span style="--i:1;"></span>
+            <span style="--i:2;"></span>
+            <span style="--i:3;"></span>
+            <span style="--i:4;"></span>
+            <div class="number">
+                <b style="--i:0;">5</b>
+                <b style="--i:1;">1</b>
+                <b style="--i:2;">4</b>
+                <b style="--i:3;">6</b>
+                <b style="--i:4;">2</b>
+                <b style="--i:5;">8</b>
+                <b style="--i:6;">7</b>
+                <b style="--i:7;">3</b>
+            </div>
+        </div>
+
+        <div class="wheel inner">
+            <span style="--i:0;"></span>
+            <span style="--i:1;"></span>
+            <span style="--i:2;"></span>
+            <span style="--i:3;"></span>
+            <span style="--i:4;"></span>
+            <div class="number">
+                <b style="--i:0;">5</b>
+                <b style="--i:1;">1</b>
+                <b style="--i:2;">4</b>
+                <b style="--i:3;">6</b>
+                <b style="--i:4;">2</b>
+                <b style="--i:5;">8</b>
+                <b style="--i:6;">7</b>
+                <b style="--i:7;">3</b>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        let wheel=document.querySelector('.wheel');
+        let inner=document.querySelector('.inner');
+        let spinBtn=document.querySelector('.spinBtn');
+
+        let value1=Math.ceil(Math.random() * -3600);
+        let value2=Math.ceil(Math.random() * 3600);
+
+        spinBtn.onclick = function(){
+            wheel.style.transform = "rotate("+ value1 +"deg)";
+            inner.style.transform = "rotate("+ value1 +"deg)";
+            value1 += Math.ceil(Math.random() * -3600);
+            value2 +=Math.ceil(Math.random() * 3600);
+        }
+    </script>
+</body>
+</html>
