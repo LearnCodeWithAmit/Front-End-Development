@@ -1,0 +1,111 @@
+/* ROBOTO FONT */  
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+/* POPPINS FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+/* ===== Color Variables */
+:root{
+    --bg-color: linear-gradient(to bottom right,#EEEEEE, #E0E3EB);
+    --white-color: #FFFFFF;
+    --black-color: #000E1A;
+    --orange-color: #FFA500;
+    --medium-dark: #333333;
+    --light-gray: #CCCCCC;
+  
+ }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--bg-color);
+}
+.container
+{
+    max-width: 400px;
+    width: 100%;
+    border-radius: 30px;
+    padding: 20px;
+    background: var(--black-color);
+    color: var(--white-color);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.display-container
+{
+    display: flex;
+    flex-direction: column;
+    margin-block: 40px 30px;
+}
+.history
+{
+    font-family: 'Roboto',sans-serif;
+    width: 100%;
+    height: 30px;
+    text-align: right;
+    color: var(--light-gray);
+    font-weight: 300;
+}
+.display
+{
+    font-size: 50px;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 100;
+    height: 70px;
+    width: 100%;
+    text-align: right;
+    outline: none;
+    border: none;
+    pointer-events: none;
+    background: transparent;
+    color: var(--white-color);
+}
+::placeholder
+{
+    color: var(--white-color);
+}
+.buttons
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 15px;
+}
+.buttons button
+{
+    width: 75px;
+    height: 75px;
+    font-size: 24px;
+    font-weight: 300;
+    background-color: var(--medium-dark);
+    color: var(--white-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.buttons .operator
+{
+    background-color: var(--orange-color);
+}
+.operator.top-operator
+{
+    background-color: var(--light-gray);
+    color: var(--black-color);
+}
+.buttons button:active
+{
+    transform: scale(0.95);
+}
+button.value-zero
+{
+    width: calc(50% - 8px);
+    border-radius: 50px;
+}
