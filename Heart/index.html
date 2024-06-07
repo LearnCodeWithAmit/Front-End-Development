@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Rain Effects |Learn Code With Amit</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="heart">
+
+        </div>
+    </div>
+    <script>
+        function rain(){
+            let heart=document.querySelector('.heart');
+            let e=document.createElement('div');
+            e.classList.add('drop');
+            heart.appendChild(e);
+
+            let left=Math.floor(Math.random() * 300);
+            let duration=Math.random()*0.5;
+            e.style.left=left+'px';
+            e.style.animationDuration=1+duration+'s';
+
+            setTimeout(()=>{
+                heart.removeChild(e);
+            },5000)
+
+        }
+        
+        setInterval(() => {
+            rain()
+        }, 50);
+    </script>
+</body>
+</html>
