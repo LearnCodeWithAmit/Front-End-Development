@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day Night Effect | Learn Code With Amit</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="scene">
+        <div class="sun"></div>
+        <div class="bg"></div>
+    </div>
+
+    <script>
+        let sun=document.querySelector('.sun');
+        let body=document.querySelector('body');
+        sun.onclick =function()
+        {
+            body.classList.toggle('dark');
+        }
+    </script>
+</body>
+</html>
