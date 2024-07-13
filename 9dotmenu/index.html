@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9 Dot Menu | Learn Code With Amit</title>
+    <link rel="stylesheet" href="style.css">
+     <!-- Font Awesome CDN Link -->
+     <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+     crossorigin="anonymous"
+     referrerpolicy="no-referrer"
+   />
+</head>
+<body>
+    <ul class="menu">
+        <div class="toggleBtn"><i class="fa-solid fa-plus"></i></div>
+        <li style="--x:-1;--y:0;--clr:#ff2972;">
+            <a href="#"><i class="fa-solid fa-house"></i></a>
+        </li>
+        <li style="--x:1;--y:0;--clr:#fee800;">
+            <a href="#"><i class="fa-solid fa-gear"></i></a>
+        </li>
+        <li style="--x:0;--y:-1;--clr:#04fc43;">
+            <a href="#"><i class="fa-solid fa-user"></i></a>
+        </li>
+        <li style="--x:1;--y:1;--clr:#fe00f1;">
+            <a href="#"><i class="fa-regular fa-envelope"></i></a>
+        </li>
+        <li style="--x:-1;--y:-1;--clr:#00b0fe;">
+            <a href="#"><i class="fa-solid fa-key"></i></a>
+        </li>
+        <li style="--x:0;--y:1;--clr:#f82307;">
+            <a href="#"><i class="fa-solid fa-video"></i></a>
+        </li>
+        <li style="--x:1;--y:-1;--clr:#a529ff;">
+            <a href="#"><i class="fa-solid fa-gamepad"></i></a>
+        </li>
+        <li style="--x:-1;--y:1;--clr:#01bdab;">
+            <a href="#"><i class="fa-solid fa-camera"></i></a>
+        </li>
+    </ul>
+    <script>
+        let toggleBtn = document.querySelector('.toggleBtn');
+        let menu = document.querySelector('.menu');
+        toggleBtn.onclick = function() {
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

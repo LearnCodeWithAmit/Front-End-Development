@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #2f363e;
+}
+.menu
+{
+    position: relative;
+    width: 220px;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu li{
+    position: absolute;
+    list-style: none;
+    transition: 0.75s;
+    width: 5px;
+    height: 5px;
+    border: 3px solid var(--clr);
+    transform: translateX(calc(var(--x) * 16px)) translateY(calc(var(--y) * 16px));
+    transition-delay: calc(0.1s * var(--y)); 
+}
+
+
+.menu.active li{
+    transform: translateX(calc(var(--x) * 80px)) translateY(calc(var(--y) * 80px));
+    width: 60px;
+    height: 60px;
+}
+.menu li i{
+    scale: 0;
+    transition-delay:  calc(0.1s * var(--y));
+}
+.menu.active li i
+{
+   scale: 1;
+}
+.menu li a{
+    position: absolute;
+    inset: 0;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--clr);
+    transition: 0.5s;
+    text-decoration: none;
+}
+.menu li a:hover
+{
+    transition: 0s;
+    background: var(--clr);
+    color: #333;
+    box-shadow: 0 0 10px var(--clr),
+    0 0 30px var(--clr),
+    0 0 50px var(--clr);
+}
+
+
+
+
+.menu .toggleBtn
+{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    cursor: pointer;
+    color: #fff;
+    font-size: 2em;
+}
+.menu .toggleBtn i{
+    z-index: 1000;
+transition: 0.75s;
+font-size: 1.5em;
+transform: scale(0) rotate(0deg);
+}
+.menu.active .toggleBtn i{
+    transform: scale(1) rotate(315deg);
+
+}
+.menu .toggleBtn::before
+{
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: #fff;
+    transition: 0.5s;
+}
+.menu.active .toggleBtn::before
+{
+  width: 60px;
+  height: 60px;
+  background: transparent;
+  border: 3px solid #fff;
+  box-sizing: border-box;
+}
