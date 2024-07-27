@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&display=swap');
+
+*{
+    font-family: "Edu AU VIC WA NT Hand", cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #151517;
+}
+nav{
+    position: relative;
+    display: flex;
+    gap: 30px;
+    background: #222327;
+    padding: 15px 60px;
+   border-radius: 10px;
+}
+nav a{
+    position: relative;
+    color: #999;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: 500;
+    z-index: 2;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 30px;
+    transition: 0.5s;
+}
+nav a.active
+{
+    color: #222327;
+}
+#indicator
+{
+    position: absolute;
+    height: 75px;
+    width: 150px;
+    background: #29fd53;
+    z-index: 1;
+    /* display: none; */
+
+}
+
+#indicator::before
+{
+    content: "";
+    position: absolute;
+    left: -30px;
+    width: 50px;
+    height: 15px;
+    background: #29fd53;
+    border-radius: 15px;
+    box-shadow: 15px 30px #29fd53,
+    5px 60px #29fd53,
+    -15px 15px #222327,
+    -10px 45px #222327;
+    transition: 0.5s;
+}
+#indicator::after
+{
+    content: "";
+    position: absolute;
+    right: -30px;
+    width: 50px;
+    height: 15px;
+    background: #29fd53;
+    border-radius: 15px;
+    box-shadow: 5px 30px #29fd53,
+    -15px 60px #29fd53,
+    15px 15px #222327,
+    10px 45px #222327;
+    transition: 0.5s;
+}
+#indicator.change::before
+{
+    left: -10px;
+    box-shadow: -15px 30px #29fd53,
+    -5px 60px #29fd53,
+    -10px 15px #222327,
+    -20px 45px #222327;
+}
+#indicator.change::after
+{
+    right: -20px;
+    box-shadow: 10px 30px #29fd53,
+    20px 60px #29fd53,
+    15px 15px #222327,
+    25px 45px #222327;
+}
